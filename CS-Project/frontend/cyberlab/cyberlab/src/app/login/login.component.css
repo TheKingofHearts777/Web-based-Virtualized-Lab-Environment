@@ -1,0 +1,111 @@
+/* Styles for the login page layout */
+.login-page {
+  min-height: 100vh; /* Ensures the page takes up the full viewport height */
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: center; /* Centers the login card horizontally */
+  align-items: center; /* Centers the login card vertically */
+  flex-direction: column; /* Stacks login card and post-it vertically */
+  background-image: url("/Campus.jpg"); /* Background image for the login page */
+  background-size: cover; /* Makes the background image cover the entire viewport */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: center; /* Centers the background image */
+  background-blend-mode: overlay; /* Applies blending to soften the image */
+  background-color: #b1b1b1; /* Adds a gray overlay to the background */
+}
+
+/* Styles for the login card container */
+.login-card {
+  background-color: #ffffff; /* White background for the card */
+  width: 100%; /* Card takes up full width within its container */
+  max-width: 30rem; /* Caps the card's width at 30 rem */
+  min-width: 20rem; /* Ensures the card doesn't shrink below 20 rem */
+  text-align: center; /* Centers text and elements within the card */
+  padding: 1.5rem; /* Adds space inside the card */
+  border-radius: 0.625rem; /* Rounds the corners of the card */
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  margin: 0; /* Removes extra margins */
+}
+
+/* Styles for the logo container */
+.logo-display {
+  width: 100%; /* Makes the container span the width of the login card */
+  margin: 0; /* Removes extra margins */
+  padding: 0; /* Removes extra padding */
+  text-align: center; /* Centers the logo within the container */
+}
+
+.logo-display img {
+  display: block; /* Prevents extra space below the image */
+  width: 100%; /* Makes the logo fill the container */
+  height: auto; /* Maintains the logo's aspect ratio */
+  margin: 0; /* Removes extra margins around the image */
+  padding: 0; /* Removes extra padding inside the image */
+}
+
+/* Styles for the greeting title within the login card */
+h1 {
+  margin: 1rem; /* Adds space above and below the title */
+  font-size: 3.5em; /* Sets a large font size for the greeting */
+}
+
+/* Styles for the subtitle within the login card */
+h6 {
+  margin-bottom: 1rem; /* Adds space below the title */
+}
+
+/* Styles for form fields inside the login card */
+mat-form-field {
+  width: 100%; /* Makes the fields span the full width of the card */
+  margin: .25rem auto; /* Adds vertical spacing between fields */
+}
+
+mat-form-field input {
+  width: 100%; /* Ensures the input spans the full width of the field */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+.username-control {
+  height: 1.5rem; /* Sets a fixed height for the username field */
+}
+
+/* Styles for username and password controls */
+.password-control {
+  height: 1.5rem; /* Sets a fixed height for the password field */
+  display: flex; /* Aligns the input and visibility toggle button */
+  align-items: center; /* Centers the input vertically */
+}
+
+/* Styles for the buttons inside the login card */
+.login-buttons {
+  display: flex; /* Uses Flexbox for button layout */
+  justify-content: space-between; /* Positions buttons in the corners */
+  width: 100%; /* Ensures buttons span the full width of the card */
+  align-items: center; /* Aligns buttons vertically */
+}
+
+/* Styles for the Create Account and Submit buttons */
+.submit-button, .create-account-button {
+  background-color: #0166b0; /* Sets a blue background for the buttons */
+  color: white; /* Sets the text color to white */
+  width: 45%; /* Ensures both buttons have equal width */
+  margin: 0; /* Removes margins around the buttons */
+  padding: 0.75rem 1rem; /* Adds padding inside the buttons */
+  text-align: center; /* Centers the button text */
+  box-sizing: border-box; /* Ensures padding doesn’t affect the button size */
+}
+
+/* Styles for the post-it note image below the card */
+/* Make sure to delete this before project starts being used */
+.post-it-display {
+  margin-top: 1rem; /* Adds space between the card and the post-it */
+  text-align: center; /* Centers the post-it container */
+}
+
+/* Make sure to delete this before project starts being used */
+.post-it-display img {
+  display: block; /* Makes the image behave like a block element */
+  width: 10rem; /* Sets the width for the post-it image */
+  height: 10rem; /* Sets the height for the post-it image */
+  margin: 2rem; /* Adds space around the post-it image */
+  text-align: center; /* Centers the image in its container */
+}

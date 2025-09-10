@@ -1,0 +1,154 @@
+.componentList {
+  margin: 80px auto;
+  background-color: #ddd;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 3%;
+  width: 80%;
+  height: 60% auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+  ul {
+    padding-left: 2%;
+    list-style-type: none;
+  }
+
+  .labTemplateOverview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    height: 54px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+  }
+
+  .listTitle, .taskTitle, .stepTitle, .questionTitle {
+    height: 54px;
+    width: 20%;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .topologyTitle {
+    height: 54px;
+    width: 20%;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    margin-right: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .labDescription, .learningObjective, .labName {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .topology {
+    display: flex;
+    justify-content: left;
+  }
+
+  .labInput {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #3F3F46;
+    flex-grow: 1;
+    height: 54px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-style: normal;
+    line-height: normal;
+    font-size: 20px;
+    box-shadow:inset 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .task1, .step1, .step2, .question1, .question2, .question3, .question4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  button {
+    all: unset;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: left;
+  }
+
+  .navButton {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 15%;
+    border-radius: 9px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .navButton:hover {
+    background-color: #61616b;
+  }
+
+  .navButton:active {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .spacer {
+    flex-grow: 1; /* Pushes the two boxes apart */
+  }
+
+  mat-expansion-panel {
+    margin-bottom: 15px;
+  }
+
+  mat-expansion-panel-header {
+    height: 54px;
+    background-color: #3F3F46;
+    --mat-expansion-header-indicator-color: #FFFFFF;
+  }
+
+  mat-panel-title {
+    height: 54px;
+    color: #FFFFFF;
+  }
+
+  mat-icon {
+    color: #FFFFFF;
+  }
+}

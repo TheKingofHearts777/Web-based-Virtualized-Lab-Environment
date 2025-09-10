@@ -1,0 +1,73 @@
+.course-list {
+  margin: 80px auto;
+  background-color: #ddd;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 3%;
+  width: 75%;
+  height: 60% auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+
+  .orderBar {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+  }
+
+  .search, .sortByDate, .sortByTime, .previous {
+      border-radius: 12px;
+  }
+
+  .search {
+      padding-left: 1%;
+      flex-grow: 1;
+  }
+
+  .sortByDate, .sortByTime, .previous{
+    border: none;
+    background-color: #3f3f46;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  mat-expansion-panel {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+  }
+  mat-expansion-panel-header {
+    background-color: #02437d;
+    --mat-expansion-header-indicator-color: #FFFFFF;
+  }
+  mat-panel-title {
+    color: #FFFFFF
+  }
+  mat-panel-description {
+    color: #FFFFFF
+  }
+  mat-icon {
+    color: #FFFFFF
+  }
+
+}
+
+.lab-container{
+  margin-top: 5px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.lab-container:hover {
+  background-color: #D0D0D0;
+}

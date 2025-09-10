@@ -1,0 +1,89 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #3F3F46;
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: .5%;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.uwp-logo {
+  width: 8rem;
+  height: 4rem;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.user {
+  margin-top: .5rem;
+  margin-right: 1rem; /* Not sure why this is needed to make it align correctly. It was too close to right boarder before */
+  display: flex;
+  align-items: center;
+  position: relative; /* For dropdown positioning */
+}
+
+.user-profile {
+  display: flex;
+}
+
+.username {
+  color: #0167B1;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.profile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+.user-dropdown {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 85%; /* Positioned below the username */
+  right: 0; /* Align dropdown with username */
+  background-color: lightgray;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.user-dropdown:hover {
+  background-color: #e0e0e0; /* Subtle hover effect on the dropdown */
+  color: #0167B1; /* Highlight on hover */
+}
+
+.user:hover .user-dropdown {
+  display: block; /* Show dropdown on hover */
+}

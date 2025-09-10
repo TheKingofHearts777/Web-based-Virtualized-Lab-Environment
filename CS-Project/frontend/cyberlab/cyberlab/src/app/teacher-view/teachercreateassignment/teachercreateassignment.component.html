@@ -1,0 +1,62 @@
+<app-header></app-header> <!-- Shared header for the page -->
+
+<!-- Main container for the teacher-create-assignment component -->
+<article class="mainComponent">
+  <ul class="itemList">
+
+    <!-- Section header to instruct users to select a lab -->
+    <li class="labSelection">Select a Lab</li>
+
+    <!-- Container for the dynamic list of lab templates -->
+    <li class="labName">
+      <!-- Material Design selection list limited to single selection -->
+      <mat-selection-list #labList [multiple]="false">
+        <!-- Loop through labTemplates array to create a list of options -->
+        <mat-list-option
+          *ngFor="let lab of labTemplates"
+          [value]="lab"
+          (click)="onLabSelected(lab)"
+        >
+          <!-- The following comments are for the three things listed above in order -->
+          <!-- Use Angular's ngFor to generate the options -->
+          <!-- Bind each option to its corresponding lab object -->
+          <!-- Trigger onLabSelected when an option is clicked -->
+
+          <!-- Display the name of the lab -->
+          {{ lab.name }}
+        </mat-list-option>
+      </mat-selection-list>
+    </li>
+
+    <!-- Error message displayed when the user tries to proceed without selecting a lab -->
+    <li *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p> <!-- Bind to errorMessage for dynamic feedback -->
+    </li>
+
+    <!-- Navigation buttons -->
+    <li class="navBar">
+      <!-- Button to navigate back to the teacher-home page -->
+      <button routerLink="/teacher-home" class="navButton">
+        <!-- Material icon for a back arrow and "Quit" label -->
+        <mat-icon fontIcon="arrow_back"></mat-icon>
+        Quit
+      </button>
+      <div class="spacer"></div> <!-- Spacer to separate navigation buttons -->
+
+      <!-- Button to proceed to the next page -->
+      <button
+        class="navButton"
+        [disabled]="!selectedLabTemplate"
+        (click)="onNext()"
+      >
+        <!-- The following comments are for the two things listed above -->
+        <!-- Disable if no lab is selected -->
+        <!-- Trigger the onNext method when clicked -->
+
+        <!-- Label and icon for the "Next" button -->
+        Next
+        <mat-icon fontIcon="arrow_forward"></mat-icon>
+      </button>
+    </li>
+  </ul>
+</article>

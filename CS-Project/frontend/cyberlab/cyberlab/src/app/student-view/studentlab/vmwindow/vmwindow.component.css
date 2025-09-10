@@ -1,0 +1,33 @@
+.window {
+    min-height: 27vw;
+    min-width: 49vw;
+    max-width: 200vw;
+    max-height: 100vh;
+    background-color: black;
+}
+.vmWindow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    max-width: 100vw;
+    min-width: 50vw;
+    display: flex;
+    color: white;
+    background-color: #1F1F1F;
+}
+.taskbarButton{
+    border-radius: 12px;
+    color: white;
+    background-color: #3F3F46;
+
+    border: none;
+    text-align: center;
+    padding: 20;
+    margin: 20 ;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}

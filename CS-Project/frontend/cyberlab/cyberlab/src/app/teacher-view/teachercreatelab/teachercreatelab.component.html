@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<article class="mainComponent">
+  <ul class="itemList">
+    <li class="createLab">Create Lab</li>
+    <li class="labName">
+      <p class="listTitle">Lab Name:</p>
+      <input matInput placeholder="" value="" class="labInput" />
+    </li>
+    <li class="learningObjective">
+      <p class="listTitle">Learning Objective:</p>
+      <input matInput placeholder="" value="" class="labInput" />
+    </li>
+    <li class="labDescription">
+      <p class="listTitle">Lab Description:</p>
+      <input matInput placeholder="" value="" class="labInput" />
+    </li>
+    <li class="topology">
+      <p class="listTitle">Topology:</p>
+      <div class="topologyButtons">
+        <p>add device</p>
+        <p>connection types</p>
+      </div>
+    </li>
+    <li class="labFileManip">
+      <p class="listTitle">Lab Files:</p>
+      <div class="fileManip">
+        <div>
+          <button mat-button>Upload</button>
+          <mat-icon>upload</mat-icon>
+        </div>
+        <div>
+          <button mat-button>Add File</button>
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+    </li>
+    <li class="navBar">
+      <button mat-button routerLink="/teacher-home" class="navButton">
+        <mat-icon fontIcon="arrow_back"></mat-icon>Quit
+      </button>
+      <div class="spacer"></div>
+      <button
+        mat-button
+        routerLink="/teacher-create-template"
+        class="navButton"
+      >
+        Next<mat-icon fontIcon="arrow_forward"></mat-icon>
+      </button>
+    </li>
+  </ul>
+</article>

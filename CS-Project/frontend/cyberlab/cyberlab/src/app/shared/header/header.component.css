@@ -1,0 +1,102 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #3F3F46;
+  height: 3.75rem; /* Fixed height ensures consistent layout */
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centers all child elements vertically */
+  justify-content: space-between; /* Keeps logo and user spaced apart */
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between; /* Keeps logo on left and user on right */
+  align-items: center; /* Ensures vertical alignment of children */
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Matches the height of the header */
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Centers the logo vertically within .navigation */
+  justify-content: center; /* Ensures perfect horizontal centering */
+  margin-left: 1rem; /* Consistent space from the left */
+  height: 100%; /* Matches height of .navigation */
+}
+
+.uwp-logo {
+  width: 6rem; /* Fixed width */
+  height: 3rem; /* Fixed height */
+  cursor: pointer;
+  display: block; /* Ensures it's treated as a block element */
+  margin: auto; /* Center aligns the logo within its container */
+}
+
+.user {
+  display: flex;
+  align-items: center; /* Centers user profile elements vertically */
+  justify-content: center; /* Ensures horizontal centering */
+  position: relative;
+  flex-shrink: 0; /* Prevents shrinking */
+  margin-right: 1rem; /* Consistent space from the right */
+  height: 100%; /* Matches height of .navigation */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center; /* Vertically aligns .username and .profile-icon */
+  justify-content: center; /* Ensures proper horizontal alignment */
+  height: 100%; /* Matches height of the .user container */
+}
+
+.username {
+  color: #0167B1;
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  margin-right: 1rem; /* Space between username and profile icon */
+  margin-bottom: 0;
+  display: inline-block; /* Keeps the username text inline but allows alignment */
+  align-self: center; /* Aligns the username within the .user-profile */
+  line-height: 3.75rem; /* Matches the .header height for better alignment */
+}
+
+.profile-icon {
+  width: 1.5rem; /* Fixed size for consistent alignment */
+  height: 1.5rem;
+  display: block; /* Ensures it behaves as a block-level element */
+  margin: auto; /* Centers the icon vertically and horizontally within the container */
+}
+
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 98%; /* Positioned closer to username */
+  right: 0;
+  background-color: lightgray;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.user-dropdown:hover {
+  background-color: #e0e0e0; /* Subtle hover effect */
+  color: #0167B1;
+}
+
+.user:hover .user-dropdown {
+  display: block; /* Show dropdown on hover */
+}

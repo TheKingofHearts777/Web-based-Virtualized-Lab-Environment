@@ -1,0 +1,301 @@
+<app-header></app-header>
+
+<article class="mainComponent">
+  <ul class="itemList">
+    <li class="createLab">Objective Creation Screen</li>
+    <form [formGroup]="labForm" (ngSubmit)="onSubmit()">
+      <div formArrayName="objectives">
+        @for ( question of labForm.controls.objectives.controls; track
+        objectiveIndex; let objectiveIndex = $index) {
+
+        <div class="objective" [formGroupName]="objectiveIndex">
+          <li class="labObjective">
+            <div class="sectionBlock">
+              <div class="listTitleObj">
+                Page {{ objectiveIndex + 1 }}:
+                <div class="spacer"></div>
+                <span (click)="removeObjective(objectiveIndex)" class="remove">
+                  <mat-icon class="delete-button">delete</mat-icon>
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <div formArrayName="steps">
+            @for ( question of
+            labForm.controls.objectives.controls.at(objectiveIndex)?.controls?.steps?.controls;
+            track stepIndex; let stepIndex = $index) {
+
+            <div class="step" [formGroupName]="stepIndex">
+              <li class="labStep">
+                <div class="sectionBlock">
+                  <div class="listTitleStep">
+                    <span
+                      (click)="removeStep(objectiveIndex, stepIndex)"
+                      class="remove"
+                    >
+                      <mat-icon class="delete-button">delete</mat-icon>
+                    </span>
+                    <div class="spacer"></div>
+                    Step {{ stepIndex + 1 }}:
+                  </div>
+                  <div class="innerBlock">
+                    <input
+                      matInput
+                      type="text"
+                      formControlName="stepName"
+                      placeholder="Step name"
+                      class="labInputName"
+                    />
+                    <input
+                      matInput
+                      type="text"
+                      formControlName="stepDesc"
+                      placeholder="Step description"
+                      class="labInputDesc"
+                    />
+                  </div>
+                </div>
+              </li>
+            </div>
+            }
+          </div>
+
+          <div formArrayName="choiceQuestions">
+            @for ( question of
+              labForm.controls.objectives.controls.at(objectiveIndex)?.controls?.choiceQuestions?.controls;
+              track choiceQuestionIndex; let choiceQuestionIndex = $index) {
+
+              <div class="question" [formGroupName]="choiceQuestionIndex">
+                <li class="labQuestions">
+                  <div class="sectionBlock">
+                    <div class="listTitleQuestion">
+                        <span
+                          (click)="
+                            removeChoiceQuestion(
+                              objectiveIndex,
+                              choiceQuestionIndex
+                            )
+                          "
+                          class="remove"
+                        >
+                          <mat-icon class="delete-button">delete</mat-icon>
+                        </span>
+                      <div class="spacer"></div>
+                      Multiple Choice Question {{ choiceQuestionIndex + 1 }}:
+                    </div>
+                    <div class="innerBlock">
+                      <input
+                        matInput
+                        type="text"
+                        formControlName="questionName"
+                        placeholder="Question description"
+                        class="labInputDesc"
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <div formArrayName="answers" class="answers">
+                  @for (question of
+                    labForm.controls.objectives.controls.at(objectiveIndex)?.controls?.choiceQuestions?.controls?.at
+                    (choiceQuestionIndex)?.controls?.answers?.controls; track
+                    answerIndex; let answerIndex = $index;) {
+
+                    <div [formGroupName]="answerIndex" class="answer">
+                      <li class="labAnswers">
+                        <div class="sectionBlock">
+                          <div class="listTitleAnswer">
+                            <span
+                              (click)="
+                                removeAnswer(
+                                  objectiveIndex,
+                                  choiceQuestionIndex,
+                                  answerIndex
+                                )
+                              "
+                              class="remove"
+                            >
+                              <mat-icon class="delete-button">delete</mat-icon>
+                            </span>
+                            <div class="spacer"></div>
+                            Answer {{ answerIndex + 1 }}:
+                          </div>
+                          <div class="innerBlock">
+                            <input
+                              matInput
+                              type="text"
+                              placeholder="Answer"
+                              formControlName="text"
+                              class="labInputName"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  }
+                  <button
+                    mat-stroked-button
+                    type="button"
+                    class="add-answer"
+                    (click)="
+                        addAnswer(objectiveIndex, choiceQuestionIndex)
+                      "
+                  >
+                    <mat-icon class="add-symbol" fontIcon="add"></mat-icon>
+                    Add Answer
+                  </button>
+                </div>
+              </div>
+            }
+          </div>
+          <div formArrayName="tfQuestions">
+            @for ( question of
+              labForm.controls.objectives.controls.at(objectiveIndex)?.controls?.tfQuestions?.controls;
+              track tfQuestionIndex; let tfQuestionIndex = $index) {
+
+              <div class="question" [formGroupName]="tfQuestionIndex">
+                <li class="labQuestions">
+                  <div class="sectionBlock">
+                    <div class="listTitleQuestion">
+                        <span
+                          (click)="
+                            removeTFQuestion(
+                              objectiveIndex,
+                              tfQuestionIndex
+                            )
+                          "
+                          class="remove"
+                        >
+                          <mat-icon class="delete-button">delete</mat-icon>
+                        </span>
+                      <div class="spacer"></div>
+                      True False Question {{ tfQuestionIndex + 1 }}:
+                    </div>
+                    <div class="innerBlock">
+                      <input
+                        matInput
+                        type="text"
+                        formControlName="questionName"
+                        placeholder="Question description"
+                        class="labInputDesc"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </div>
+            }
+          </div>
+          <div formArrayName="textQuestions">
+            @for ( question of
+              labForm.controls.objectives.controls.at(objectiveIndex)?.controls?.textQuestions?.controls;
+              track textQuestionIndex; let textQuestionIndex = $index) {
+
+              <div class="question" [formGroupName]="textQuestionIndex">
+                <li class="labQuestions">
+                  <div class="sectionBlock">
+                    <div class="listTitleQuestion">
+                        <span
+                          (click)="
+                            removeTextQuestion(
+                              objectiveIndex,
+                              textQuestionIndex
+                            )
+                          "
+                          class="remove"
+                        >
+                          <mat-icon class="delete-button">delete</mat-icon>
+                        </span>
+                      <div class="spacer"></div>
+                      Short Answer Question {{ textQuestionIndex + 1 }}:
+                    </div>
+                    <div class="innerBlock">
+                      <input
+                        matInput
+                        type="text"
+                        formControlName="questionName"
+                        placeholder="Question description"
+                        class="labInputDesc"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </div>
+            }
+          </div>
+
+          <div class="add-step">
+            <button
+              mat-flat-button
+              (click)="addStep(objectiveIndex)"
+              type="button"
+              class="add-step"
+            >
+              <mat-icon class="add-symbol" fontIcon="add"></mat-icon>
+              Add Step
+            </button>
+          </div>
+          <div class="add-question">
+            <button mat-button class="add-question" [matMenuTriggerFor]="menu">
+              <mat-icon class="add-symbol" fontIcon="add"></mat-icon>
+              Add Question
+            </button>
+            <mat-menu #menu="matMenu">
+              <button
+                mat-menu-item
+                (click)="addChoiceQuestion(objectiveIndex)"
+                type="button"
+                class="add-question">
+                Multiple Choice
+              </button>
+              <button
+                mat-menu-item
+                (click)="addTFQuestion(objectiveIndex)"
+                type="button"
+                class="add-question">
+                True False
+              </button>
+              <button
+                mat-menu-item
+                (click)="addTextQuestion(objectiveIndex)"
+                type="button"
+                class="add-question">
+                Short Answer
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="add-objective">
+        <button
+          mat-flat-button
+          (click)="addObjective()"
+          type="button"
+          class="add-objective"
+        >
+          <mat-icon class="add-symbol" fontIcon="add"></mat-icon>
+          Add Page Break
+        </button>
+      </div>
+      <div>
+        <button mat-flat-button type="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+    <li class="navBar">
+      <button mat-button routerLink="/teacher-create-lab" class="navButton">
+        <mat-icon fontIcon="arrow_back"></mat-icon>Back
+      </button>
+      <div class="spacer"></div>
+      <button
+        mat-button
+        routerLink="/teacher-creation-overview"
+        class="navButton"
+      >
+        Next<mat-icon fontIcon="arrow_forward"></mat-icon>
+      </button>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<article class="componentList">
+  <ul class="components">
+    <li class="assignment-lab-view">Labs</li>
+    <ul class="orderBar">
+      <input matInput placeholder="search" value="" class="search" />
+      <div>
+        <button mat-button class="sortByDate">Sort By Date</button>
+        <button mat-button class="sortByTime">Sort by Time</button>
+      </div>
+    </ul>
+    <mat-accordion>
+      <button mat-button routerLink="/teacher-create-lab" class="addButton">
+        Create a Template
+        <mat-icon class="addIcon">add</mat-icon>
+      </button>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header class="panelHeader">
+          <mat-panel-title class="panelTitle">All Templates</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div #labs class="item"></div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <button
+        mat-button
+        routerLink="/teacher-create-assignment"
+        class="addButton"
+      >
+        Create a Lab
+        <mat-icon class="addIcon">add</mat-icon>
+      </button>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="panelTitle"
+            >Upcoming Lab</mat-panel-title
+          >
+        </mat-expansion-panel-header>
+        <div #assignments class="item"></div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="panelTitle">Past Labs</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="item">Temp... need to sort the labs later</div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <li class="navBar">
+      <button mat-button routerLink="/teacher-home-view" class="navButton">
+        <mat-icon fontIcon="arrow_back"></mat-icon>Previous
+      </button>
+    </li>
+  </ul>
+</article>

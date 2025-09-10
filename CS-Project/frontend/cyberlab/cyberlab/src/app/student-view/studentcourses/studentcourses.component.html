@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<article class="course-list">
+  <ul class="orderBar">
+    <input matInput placeholder="search" value="" class="search" />
+    <div>
+      <button class="sortByDate">Sort By Date</button>
+      <button class="sortByTime">Sort by Time</button>
+    </div>
+  </ul>
+
+  <ul class="components">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Upcoming Assignments </mat-panel-title>
+          <mat-panel-description>
+            Click here to expand the panel
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div #upcomingLabs class="lab-container" routerLink="/student-lab"></div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Past Assignments </mat-panel-title>
+          <mat-panel-description>
+            Click here to expand the panel
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div #previousLabs class="lab-container" routerLink="/student-lab"></div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <div>
+      <button class="previous" routerLink="/student-home">Previous</button>
+    </div>
+  </ul>
+</article>

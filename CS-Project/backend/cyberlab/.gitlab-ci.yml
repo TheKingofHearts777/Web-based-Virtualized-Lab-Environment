@@ -1,0 +1,25 @@
+stages:
+    - build
+    - test
+
+build:
+    stage: build
+    image: maven:3.9.8-eclipse-temurin-21
+    script:
+        - cd api
+        - mvn clean install -DskipTests
+    only:
+        - backend
+        - backend-sprint4
+
+test:
+    stage: test
+    image: maven:3.9.8-eclipse-temurin-21
+    script:
+        - cd api
+        - mvn test
+    only:
+        - backend
+        - backend-sprint4
+    dependencies:
+        - build

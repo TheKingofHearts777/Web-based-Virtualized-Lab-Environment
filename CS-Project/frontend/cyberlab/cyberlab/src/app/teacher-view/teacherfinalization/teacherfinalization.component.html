@@ -1,0 +1,24 @@
+<app-header></app-header>
+<article class="mainComponent">
+  <ul class="itemList">
+    <li class="selectDate">Select a Date</li>
+    <li class="dateSelection">
+      <p class="dueDate">Due Date: </p>
+      <mat-form-field class="dateInput">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </li>
+    <li class="navBar">
+      <button routerLink="/teacher-assign-points" class="navButton">
+        <mat-icon fontIcon="arrow_back"></mat-icon>Previous</button>
+      <div class="spacer"></div>
+      <button routerLink="/teacher-home" class="navButton">
+        Finish<mat-icon fontIcon="arrow_forward"></mat-icon>
+      </button>
+    </li>
+  </ul>
+</article>

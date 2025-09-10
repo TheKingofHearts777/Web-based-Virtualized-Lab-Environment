@@ -1,0 +1,111 @@
+<app-header></app-header>
+
+<article class="componentList">
+  <ul class="components">
+    <li class="labTemplateOverview">Lab Template Overview</li>
+
+    <li class="labName">
+      <p class="listTitle">Lab Name:</p>
+      <p class="labInput">Lab: 001</p>
+    </li>
+
+    <li class="learningObjective">
+      <p class="listTitle">Learning Objective:</p>
+      <p class="labInput">This is an example of a Lab Learning Objective.</p>
+    </li>
+
+    <li class="labDescription">
+      <p class="listTitle">Lab Description:</p>
+      <p class="labInput">This is an example of a Lab Description.</p>
+    </li>
+
+    <li class="topology">
+      <span class="topologyTitle">Topology: </span>
+
+      <mat-accordion>
+        <mat-expansion-panel class="panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="panelTitle">
+              Virtual Machines
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="item">Test VM 1</p>
+          <p class="item">Test VM 2</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-accordion>
+        <mat-expansion-panel class="panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="panelTitle">
+              Connection Types
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="item">Test 1</p>
+          <p class="item">Test 2</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-accordion>
+        <mat-expansion-panel class="panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="panelTitle">
+              Networking Devices
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="item">Test 1</p>
+          <p class="item">Test 2</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="task1">
+      <p class="taskTitle">Task 1</p>
+      <p class="labInput">This is an example of a task.</p>
+    </li>
+
+    <li class="step1">
+      <p class="stepTitle">Step 1</p>
+      <p class="labInput">This is an example of a step.</p>
+    </li>
+
+    <li class="question1">
+      <p class="questionTitle">Question 1</p>
+      <p class="labInput">This is an example of a question.</p>
+    </li>
+
+    <li class="question2">
+      <p class="questionTitle">Question 2</p>
+      <p class="labInput">This is an example of a question.</p>
+    </li>
+
+    <li class="step2">
+      <p class="stepTitle">Step 2</p>
+      <p class="labInput">This is an example of a step.</p>
+    </li>
+
+    <li class="question3">
+      <p class="questionTitle">Question 3</p>
+      <p class="labInput">This is an example of a question.</p>
+    </li>
+
+    <li class="question4">
+      <p class="questionTitle">Question 4</p>
+      <p class="labInput">This is an example of a question.</p>
+    </li>
+
+    <li class="navBar">
+      <button
+        mat-button
+        routerLink="/teacher-create-template"
+        class="navButton"
+      >
+        <mat-icon fontIcon="arrow_back"></mat-icon>Back
+      </button>
+      <div class="spacer"></div>
+      <button mat-button routerLink="/teacher-home" class="navButton">
+        Finish<mat-icon fontIcon="arrow_forward"></mat-icon>
+      </button>
+    </li>
+  </ul>
+</article>

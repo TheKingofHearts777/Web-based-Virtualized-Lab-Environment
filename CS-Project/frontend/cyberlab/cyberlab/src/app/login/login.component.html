@@ -1,0 +1,89 @@
+<div class="login-page">
+  <!-- Main wrapper for the login page -->
+  <mat-card class="login-card">
+    <!-- The login card acts as the central container for login elements -->
+    <div class="logo-display">
+      <!-- Displays the Cyberlab logo at the top of the card -->
+      <img src="/Cyberlablogo01.png" alt="Logo" />
+    </div>
+    <h1>Welcome back</h1> <!-- Greeting title for the login card -->
+    <h6>Please enter your sign in information</h6> <!-- Subtitle to guide the user -->
+    <mat-form-field>
+      <!-- Wrapper for the username input field -->
+      <div class="username-control">
+        <input matInput
+               placeholder="Username"
+               [formControl]="loginForm.controls.username"
+               id="username"
+               required
+               aria-label="Enter your username" />
+        <!-- The following comments are for the things listed above -->
+        <!-- Placeholder text for the field -->
+        <!-- Angular form control binding -->
+        <!-- Assigns an ID for accessibility -->
+        <!-- Makes the username field mandatory -->
+        <!-- Accessibility label for screen readers -->
+      </div>
+    </mat-form-field>
+    <mat-form-field>
+      <!-- Wrapper for the password input field -->
+      <div class="password-control">
+        <input matInput
+               [type]="hide() ? 'password' : 'text'"
+               placeholder="Password"
+               [formControl]="loginForm.controls.password"
+               id="password"
+               (keyup.enter)="login()"
+               aria-label="Enter your password" />
+        <!-- The following comments are for the things listed above -->
+        <!-- Toggles password visibility -->
+        <!-- Placeholder text for the field -->
+        <!-- Angular form control binding -->
+        <!-- Assigns an ID for accessibility -->
+        <!-- Listens for the Enter key to trigger login -->
+        <!-- Accessibility label for screen readers -->
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEventHide($event)"
+          [attr.aria-label]="'Toggle password visibility'"
+          [attr.aria-pressed]="hide()">
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <!-- The following comments are for the things listed above -->
+          <!-- Button styled as a Material icon -->
+          <!-- Places the icon suffix beside the input field -->
+          <!-- Event handler for toggling visibility -->
+          <!-- Accessibility label -->
+          <!-- Tracks visibility state -->
+          <!-- Changes icon dynamically -->
+        </button>
+      </div>
+    </mat-form-field>
+    <div class="login-buttons">
+      <!-- Wrapper for the Create Account and Submit buttons -->
+      <button class="create-account-button"
+              mat-fab extended
+              (click)="clickEventCreate($event)">
+        Create Account
+        <!-- The following comments are for the things listed above -->
+        <!-- Style for a Material FAB button -->
+        <!-- Event handler for account creation -->
+        <!-- Button text -->
+      </button>
+      <button class="submit-button"
+              mat-fab extended
+              (click)="clickEventSubmit($event)">
+        Submit
+        <!-- The following comments are for the things listed above -->
+        <!-- Style for a Material FAB button -->
+        <!-- Event handler for submitting credentials -->
+        <!-- Button text -->
+      </button>
+    </div>
+  </mat-card>
+  <!-- Make sure to delete this div class before project starts being used -->
+  <div class="post-it-display">
+    <!-- Displays the post-it note image below the login card -->
+    <img src="/BadSecurity.png" alt="this is the usernames and passwords" />
+  </div>
+</div>

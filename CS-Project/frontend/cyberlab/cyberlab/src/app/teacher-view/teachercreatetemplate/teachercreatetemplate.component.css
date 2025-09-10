@@ -1,0 +1,199 @@
+.mainComponent {
+  margin: 80px auto;
+  background-color: #ddd;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 3%;
+  width: 80%;
+  height: 60% auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+  ul {
+    list-style-type: none;
+  }
+
+  .labObjective, .labStep, .labQuestions, .labAnswers {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+/*
+  Adds a white border around a objective object:
+
+  .objective{
+    border: #FFFFFF solid 3px;
+    border-radius: 12px;
+  }
+*/
+  .createLab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    height: 54px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .listTitleObj {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    width: 100% !important;
+  }
+
+  .listTitleStep {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    width: 500px !important;
+    margin-left: 20px;
+  }
+
+  .listTitleQuestion {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    width: 500px !important;
+    margin-left: 20px;
+  }
+
+  .listTitleAnswer {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    width: 500px !important;
+    margin-left: 60px;
+  }
+
+  .labInputName {
+    flex-grow: 1;
+    height: 50px;
+    border-radius: 9px;
+    width: 55vw !important;
+    margin-left: 10px;
+  }
+
+  .labInputDesc {
+    flex-grow: 1;
+    border-radius: 9px;
+    width: 55vw !important;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  .sectionBlock {
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .innerBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .add-answer, .add-question, .add-step, .add-objective {
+    margin-bottom: 2px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    width: 175px;
+    justify-content: space-between;
+  }
+
+  .submit-button {
+    margin-bottom: 2px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    width: 175px;
+    justify-content: end;
+  }
+
+  .delete-button {
+    color: #ff0000;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    justify-items: center;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+  }
+
+  .navButton {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 15%;
+    border-radius: 9px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .navButton:hover {
+    background-color: #61616b;
+  }
+
+  .navButton:active {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .spacer {
+    flex-grow: 1; /* Pushes the two boxes apart */
+  }
+}

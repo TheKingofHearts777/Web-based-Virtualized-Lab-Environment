@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="mainBody">
+    <div class="objectivesBody" >  
+        <!-- *ngIf="objectives.length"  -->
+        <div id="objectiveTitle" >objective 1</div>   
+        <!-- *ngIf="objectives.length"        -->
+        <div class="barContainer">
+            <mat-progress-bar class="progressBar" mode="determinate" [value]="progress"></mat-progress-bar>
+        </div>    
+        <div #questions></div>
+        <div class="objectiveLowerBar">
+            <button mat-button (click)="prevStep()" class="navButton">
+                <!-- [disabled]="currentObjectiveIndex === 0" -->
+                <mat-icon fontIcon="arrow_back"></mat-icon>Previous Step
+            </button> 
+            <div class="spaceBetween"></div>
+            <button mat-button (click)="nextStep()" class="navButton">
+                <!-- [disabled]="currentObjectiveIndex === objectives.length - 1" -->
+                Next Step<mat-icon fontIcon="arrow_forward"></mat-icon>
+            </button> 
+        </div>
+    </div>
+    <div class="virtualMachineBody">
+        <div>
+            <!-- <button routerLink="/student-lab-results">Student Lab Results</button> -->
+            <!-- <button routerLink="/student-courses">Student Courses</button> -->
+        </div>
+        <div>
+            <app-vmwindow></app-vmwindow>
+        </div> 
+    </div>
+</div>

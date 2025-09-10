@@ -1,0 +1,113 @@
+.mainComponent {
+  margin: 80px auto;
+  background-color: #ddd;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 3%;
+  width: 75%;
+  height: 60% auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+  ul {
+    padding-left: 2%;
+    list-style-type: none;
+  }
+
+  .selectDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    height: 54px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+  }
+
+  .dueDate {
+    height: 3.375rem; /* Approximately equal to 54px */
+    width: 20%;
+    background-color: #3F3F46;
+    color: #FFFFFF; border-radius: 9px;
+    padding: 0 0.625rem; /* Approximately equal to 10px */
+    display: flex; align-items: center; /* Centers vertically */
+    justify-content: flex-start;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .dateSelection {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.625rem; /* Approximately equal to 10px */
+    margin-bottom: .5rem; /* Adds more space below the labName */
+  }
+
+  .dateInput {
+    flex-grow: 1;
+    display: flex;
+    height: 4.5rem; /* Ensure this matches .listTitle height */
+  }
+
+  .mat-form-field {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centers the form field vertically */
+    height: 3.375rem; /* Match the height of its container */
+  }
+
+  .mat-form-field-wrapper {
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    height: 100%;
+  }
+  .mat-form-field-flex {
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    height: 100%;
+  }
+
+  .mat-form-field-infix {
+    height: 100%; /* Match the height of the form field */
+    display: flex; align-items: center; /* Centers text vertically */
+  }
+
+  .mat-input-element {
+    height: 2.875rem; /* Adjust input height */
+    padding: 0 0.625rem; /* Adjust padding as needed */
+  }
+
+  button {
+    all: unset;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: left;
+  }
+
+  .navButton {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  .spacer {
+    flex-grow: 1; /* Pushes the two boxes apart */
+  }
+}

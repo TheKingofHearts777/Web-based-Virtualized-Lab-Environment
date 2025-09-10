@@ -1,0 +1,16 @@
+# DB
+DB_URI="mongodb+srv://papenthieng:YSmwWmbsLQ7iBuZP@cluster0.eerqx.mongodb.net/cyberlabs-dev?retryWrites=true&w=majority&appName=Cluster0"
+DB_NAME="cyberlabs-dev"
+
+# Proxmox
+PROXMOX_HOST="127.0.0.1"
+PROXMOX_PORT="8006"
+PROXMOX_AUTH="root@pam!api_token=caf150d1-576f-43cb-89c3-0eeb8ccbe1f5"
+PROXMOX_NODE="chexmix"
+
+# SFTP - generally same host and port as '# Proxmox' ^
+SFTP_HOST="127.0.0.1:8006"
+SFTP_PORT="8006"
+SFTP_USERNAME="root"
+SFTP_PASSWORD="password"
+SFTP_PATH="/home/"

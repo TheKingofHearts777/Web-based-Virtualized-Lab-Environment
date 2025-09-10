@@ -1,0 +1,27 @@
+<div class="header">
+  <ul class="navigation">
+
+    <li class="logo">
+      <div *ngIf="userRole === 'teacher'; else studentLogo" routerLink="/teacher-home-view">
+        <img src="/Cyberlablogo01.png" alt="CyberLabLogo" class="uwp-logo" />
+      </div>
+      <ng-template #studentLogo>
+        <div routerLink="/student-home">
+          <img src="/Cyberlablogo01.png" alt="CyberLabLogo" class="uwp-logo" />
+        </div>
+      </ng-template>
+    </li>
+
+    <li class="user">
+      <div class="user-profile">
+        <p class="username">{{ username }}</p>
+        <div>
+          <img class="profile-icon" src="/defaultProfile.png" alt="Profile Picture"
+          />
+        </div>
+        <a class="user-dropdown" (click)="logout()" routerLink="/"> Logout </a>
+      </div>
+    </li>
+
+  </ul>
+</div>

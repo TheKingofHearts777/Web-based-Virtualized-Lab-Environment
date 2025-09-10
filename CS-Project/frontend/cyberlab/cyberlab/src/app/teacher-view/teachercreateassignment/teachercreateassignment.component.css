@@ -1,0 +1,95 @@
+.mainComponent {
+  margin: 5em auto;
+  background-color: #ddd;
+  padding: 1em;
+  width: 65%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  ul {
+    padding: 1em;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .labSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    height: 54px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+  }
+
+  .listTitle {
+    height: 54px;
+    width: 20%;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start; /* Aligns text to the left */
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .labName {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .labInput {
+    flex-grow: 1;
+    height: 50px;
+    border-radius: 9px;
+  }
+
+  button {
+    all: unset;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: left;
+  }
+
+  .navButton {
+    height: 54px;
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 15%;
+    border-radius: 9px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .navButton:hover {
+    background-color: #61616b;
+  }
+
+  .navButton:active {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .spacer {
+    flex-grow: 1; /* Pushes the two boxes apart */
+  }
+}
