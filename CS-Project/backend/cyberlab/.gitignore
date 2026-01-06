@@ -34,3 +34,4 @@ build/
 
 # Environment files
 api/.env.txt
+CS-Project\backend\cyberlab\.env
